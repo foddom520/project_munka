@@ -1,13 +1,5 @@
-// Dark mode button
-const darkModeBtn = document.querySelector("#dark-mode-btn");
+const darkModeToggle = document.querySelector('#dark-mode-toggle-checkbox');
 
-darkModeBtn.addEventListener("click", () => {
-  // Toggle dark mode class on body element
-  document.body.classList.toggle("dark-mode");
-  // Toggle dark mode class on cards
-  const cards = document.querySelectorAll(".card");
-  cards.forEach(card => card.classList.toggle("dark-mode"));
-  // Toggle dark mode class on buttons
-  const buttons = document.querySelectorAll(".btn");
-  buttons.forEach(button => button.classList.toggle("dark-mode"));
+darkModeToggle.addEventListener('change', () => {
+  document.body.classList.toggle('dark-mode', darkModeToggle.checked);
 });

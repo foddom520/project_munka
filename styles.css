@@ -73,7 +73,7 @@ body {
   }
    
 
-body.dark-mode {
+  body.dark-mode {
     background-color: #1C1C1C;
     color: #FFFFFF;
   }
@@ -86,7 +86,7 @@ body.dark-mode {
     color: #1C1C1C;
   }
   
-  /* Gomb */
+  /* Sötét Gomb */
   #dark-mode-btn {
     font-size: 18px;
     font-weight: bold;
@@ -96,8 +96,59 @@ body.dark-mode {
     padding: 15px 25px;
     transition: background-color 0.3s ease-in-out;
   }
+  
   #dark-mode-btn:hover {
     background-color: #1C1C1C;
     color: #FFFFFF;
+  }
+    
+  .dark-mode-toggle input {
+      width: 40px;
+      height: 20px;
+      display: none;
+  }
+
+  .dark-mode-toggle label {
+      display: inline-block;
+      width: 60px;
+      height: 30px;
+      background-color: #ccc;
+      border-radius: 30px;
+      position: relative;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  .dark-mode-toggle-circle {
+      position: absolute;
+      top: 4px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      transition: transform 0.3s ease;
+      transform: translateX(4px);
+  }
+
+  .dark-mode-toggle input[type="checkbox"]:checked + label {
+      background-color: #212121;
+  }
+
+  .dark-mode-toggle input[type="checkbox"]:checked + label .dark-mode-toggle-circle {
+      transform: translateX(34px);
+  }
+
+  .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dark-mode-toggle p {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #212121;
+    vertical-align: middle;
   }
   
